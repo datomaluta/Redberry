@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  background-color: #101111;
+  background-image: url("img/stars.png");
+  background-repeat: no-repeat;
+}
+
+.welcome-text {
+  color: #fe3b1f;
+  font-size: 96px;
+  font-family: "Rowdies", cursive;
+  margin-top: 175px;
+  margin-bottom: 105px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.start-button {
+  width: 395px;
+  height: 79px;
+  border-radius: 50px;
+  background-color: #fe3b1f;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  color: #ffffff;
+  font-family: inherit;
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+
+.go-to-sub {
+  font-family: inherit;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rocketman {
+  position: absolute;
+  left: 49%;
+  transform: translate(-50%);
+  /* transform: rotate(); */
+}
