@@ -166,3 +166,22 @@ body {
   /* position: absolute; */
   margin-right: 150px;
 }
+
+/* ///////////////////
+//////////////
+/////////// */
+
+/* Insight */
+
+.text-area {
+  width: 535px;
+  height: 122px;
+  margin-top: 20px;
+  padding-left: 23px;
+  padding-top: 24px;
+  margin-bottom: 40px;
+}
+
+.text-area-second {
+  height: 89px;
+}
