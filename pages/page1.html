@@ -26,27 +26,54 @@
         </h1>
         <div class="form-div">
           <form class="form-class">
-            <input type="text" class="input-class" placeholder="First Name" />
-            <input type="text" class="input-class" placeholder="Last Name" />
-            <input type="text" class="input-class" placeholder="E Mail" />
+            <div class="error" id="fn-error"></div>
             <input
-              type="number"
+              id="firstName"
+              type="text"
+              class="input-class"
+              placeholder="First Name"
+              required
+            />
+
+            <div class="error" id="ln-error"></div>
+            <input
+              id="lastName"
+              type="text"
+              class="input-class"
+              placeholder="Last Name"
+              required
+            />
+            <div class="error" id="email-error"></div>
+            <input
+              id="email"
+              type="email"
+              class="input-class"
+              placeholder="E Mail"
+              pattern="/^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+              required
+            />
+            <div class="error" id="phone-error"></div>
+            <input
+              id="phoneNumber"
+              type="text"
               class="input-class"
               placeholder="+995 5__ __ __ __ 
 
           "
             />
           </form>
+
+          <button class="test-btn">testbtn</button>
         </div>
         <div class="buttons-div">
           <button class="button-class prev-btn">
             <img src="../img/Previous.svg" alt="previous-button" />
           </button>
-          <button class="dot dot-active"></button>
-          <button class="dot"></button>
-          <button class="dot"></button>
-          <button class="dot"></button>
-          <button class="dot"></button>
+          <button class="dot dot1 dot-active"></button>
+          <button class="dot dot2"></button>
+          <button class="dot dot3"></button>
+          <button class="dot dot4"></button>
+          <button class="dot dot5"></button>
           <button class="button-class next-btn">
             <img src="../img/Next.svg" alt="previous-button" />
           </button>
@@ -67,5 +94,6 @@
     </div>
 
     <script src="../common.js"></script>
+    <script src="../validate.js"></script>
   </body>
 </html>

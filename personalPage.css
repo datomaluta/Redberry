@@ -145,6 +145,7 @@ body {
   align-items: center;
   border: 1px solid #525557;
   margin-bottom: 17px;
+  justify-content: space-around;
 }
 
 .skill-div p {
@@ -156,7 +157,7 @@ body {
 }
 
 .remove-button {
-  margin-left: 185px;
+  /* margin-left: 185px; */
   background: none;
   border: none;
   cursor: pointer;

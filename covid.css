@@ -185,3 +185,15 @@ body {
 .text-area-second {
   height: 89px;
 }
+
+#last-covid-case {
+  display: none;
+}
+
+#vaccine-div {
+  display: none;
+}
+
+#devtalk-textarea-div {
+  display: none;
+}
