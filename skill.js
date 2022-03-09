@@ -72,11 +72,12 @@ addLanguageBtn.addEventListener("click", function (e) {
   delImg.setAttribute("src", "../img/Remove.svg");
   delBtn.appendChild(delImg);
 
-  skillDiv.appendChild(pForLanguage);
-  skillDiv.appendChild(pForExperience);
-  skillDiv.appendChild(delBtn);
-
-  document.querySelector(".skill-div-wrapper").appendChild(skillDiv);
+  if (experience.value.length >= 1) {
+    skillDiv.appendChild(pForLanguage);
+    skillDiv.appendChild(pForExperience);
+    skillDiv.appendChild(delBtn);
+    document.querySelector(".skill-div-wrapper").appendChild(skillDiv);
+  }
 
   let skillWrapperCount =
     document.querySelector(".skill-div-wrapper").childElementCount;
@@ -141,22 +142,24 @@ addLanguageBtn.addEventListener("click", function (e) {
 
   // console.log(skill.value);
 
-  if (skill == "HTML") {
-    skilebisMasivi.push({ id: 1, experience: experience.value });
-  } else if (skill == "CSS") {
-    skilebisMasivi.push({ id: 2, experience: experience.value });
-  } else if (skill == "PHP") {
-    skilebisMasivi.push({ id: 3, experience: experience.value });
-  } else if (skill == "Laravel") {
-    skilebisMasivi.push({ id: 4, experience: experience.value });
-  } else if (skill == "React.JS") {
-    skilebisMasivi.push({ id: 5, experience: experience.value });
-  } else if (skill == "Vue.JS") {
-    skilebisMasivi.push({ id: 6, experience: experience.value });
-  } else if (skill == "Svelte") {
-    skilebisMasivi.push({ id: 7, experience: experience.value });
-  } else if (skill == "Angular") {
-    skilebisMasivi.push({ id: 8, experience: experience.value });
+  if (experience.value.length >= 1) {
+    if (skill == "HTML") {
+      skilebisMasivi.push({ id: 1, experience: experience.value });
+    } else if (skill == "CSS") {
+      skilebisMasivi.push({ id: 2, experience: experience.value });
+    } else if (skill == "PHP") {
+      skilebisMasivi.push({ id: 3, experience: experience.value });
+    } else if (skill == "Laravel") {
+      skilebisMasivi.push({ id: 4, experience: experience.value });
+    } else if (skill == "React.JS") {
+      skilebisMasivi.push({ id: 5, experience: experience.value });
+    } else if (skill == "Vue.JS") {
+      skilebisMasivi.push({ id: 6, experience: experience.value });
+    } else if (skill == "Svelte") {
+      skilebisMasivi.push({ id: 7, experience: experience.value });
+    } else if (skill == "Angular") {
+      skilebisMasivi.push({ id: 8, experience: experience.value });
+    }
   }
   console.log(skilebisMasivi);
   localStorage.setItem("skills", JSON.stringify(skilebisMasivi));

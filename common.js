@@ -28,6 +28,12 @@ console.log(email);
 
 const phoneNumber = document.getElementById("phoneNumber");
 
+// const covidYesRadio = document.getElementById("covid-yes");
+// const covidNoRadio = document.getElementById("covid-no");
+
+// const vaccineYesRadio = document.getElementById("vaccine-yes");
+// const vaccineNoRadio = document.getElementById("vaccine-no");
+
 let currentPageNumber = Number(
   window.location.href.split("/")[4].split(".")[0].slice(-1)
 );
@@ -120,6 +126,10 @@ nextBtn.addEventListener("click", function () {
         window.location.href = `http://127.0.0.1:5500/pages/page${
           currentPageNumber + 1
         }.html`;
+        localStorage.setItem("firstname", firstName.value);
+        localStorage.setItem("lastname", lastName.value);
+        localStorage.setItem("email", email.value);
+        localStorage.setItem("phone", phoneNumber.value);
       } else {
         console.log("sheyvanlia magram validacias ver gadis");
         if (firstName.value.length <= 2) {
@@ -159,6 +169,9 @@ nextBtn.addEventListener("click", function () {
       window.location.href = `http://127.0.0.1:5500/pages/page${
         currentPageNumber + 1
       }.html`;
+      localStorage.setItem("firstname", firstName.value);
+      localStorage.setItem("lastname", lastName.value);
+      localStorage.setItem("email", email.value);
     } else {
       console.log("rato toooo");
       if (firstName.value.length <= 2) {
@@ -249,11 +262,167 @@ nextBtn.addEventListener("click", function () {
         "Please, choose at least one skill";
     }
   } else if (currentURL == "http://127.0.0.1:5500/pages/page3.html") {
-    console.log("მესამე ფეიჯი");
-    // let x = document.getElementById("covid-yes");
-    // x.addEventListener("change", function () {
-    //   console.log("შეიცვალა");
-    // });
+    // console.log("მესამე ფეიჯი");
+    if (
+      document.getElementById("sairme").checked ||
+      document.getElementById("home").checked ||
+      document.getElementById("hybrid").checked
+    ) {
+      console.log("პირველი ვალიდაცია გავლილაი");
+      if (
+        document.getElementById("covid-yes").checked &&
+        document.getElementById("covidAt").value
+      ) {
+        console.log("მეორე ვალიდაცია გაიარა");
+        // window.location.href = `http://127.0.0.1:5500/pages/page${
+        //   currentPageNumber + 1
+        // }.html`;
+        if (
+          document.getElementById("vaccine-yes").checked &&
+          document.getElementById("vaccineAt")
+        ) {
+          console.log("მესამე ვალიდაციაც მიყვა");
+          window.location.href = `http://127.0.0.1:5500/pages/page${
+            currentPageNumber + 1
+          }.html`;
+        } else if (document.getElementById("vaccine-no").checked) {
+          console.log("მესამე ვალიდაციაც ნო მაგრამ ეგაა");
+          window.location.href = `http://127.0.0.1:5500/pages/page${
+            currentPageNumber + 1
+          }.html`;
+        }
+      } else if (document.getElementById("covid-no").checked) {
+        console.log("მეორე ვალიდაცია გაიარა მაინც");
+        // window.location.href = `http://127.0.0.1:5500/pages/page${
+        //   currentPageNumber + 1
+        // }.html`;
+        if (document.getElementById("vaccine-no").checked) {
+          console.log("მესამე ვალიდაცაია გაიარა მაინც");
+          window.location.href = `http://127.0.0.1:5500/pages/page${
+            currentPageNumber + 1
+          }.html`;
+        } else if (
+          document.getElementById("vaccine-yes").checked &&
+          document.getElementById("vaccineAt")
+        ) {
+          console.log("მესამე გაიარა");
+          window.location.href = `http://127.0.0.1:5500/pages/page${
+            currentPageNumber + 1
+          }.html`;
+        }
+      } else {
+        console.log("მეორე ვალიდაცია ჩააგდო");
+      }
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    if (document.getElementById("sairme").checked) {
+      localStorage.removeItem("work_preference");
+      localStorage.setItem("work_preference", "from_office");
+    } else if (document.getElementById("home").checked) {
+      localStorage.removeItem("work_preference");
+      localStorage.setItem("work_preference", "from_home");
+    } else if (document.getElementById("hybrid").checked) {
+      localStorage.removeItem("work_preference");
+      localStorage.setItem("work_preference", "hybrid");
+    }
+
+    if (document.getElementById("vaccine-yes").checked) {
+      localStorage.removeItem("had_covid");
+      localStorage.setItem("had_covid", true);
+      localStorage.setItem(
+        "had_covid_at",
+        document.getElementById("covidAt").value
+      );
+    } else if (document.getElementById("vaccine-no").checked) {
+      // localStorage.removeItem("had_covid");
+      localStorage.setItem("had_covid", false);
+      // localStorage.removeItem("had_covid_at");
+      // localStorage.setItem("had_covid_at", "");
+    }
+
+    if (document.getElementById("vaccine-yes").checked) {
+      localStorage.removeItem("vaccinated");
+      localStorage.setItem("vaccinated", true);
+      localStorage.setItem(
+        "vaccinated_at",
+        document.getElementById("vaccineAt").value
+      );
+    } else if (document.getElementById("vaccine-no").checked) {
+      // localStorage.removeItem("vaccinated");
+      localStorage.setItem("vaccinated", false);
+      // localStorage.setItem("vaccinated_at", "");
+      // localStorage.removeItem("vaccinated_at");
+    }
+
+    // if (
+    //   document.getElementById("covid-yes").checked &&
+    //   document.getElementById("covidAt").value
+    // ) {
+    //   console.log("მეორე ვალიდაცია გაიარა");
+    // } else if (document.getElementById("covid-no")) {
+    //   console.log("მეორე ვალიდაცია გაიარა მაინც");
+    // } else {
+    //   console.log("მეორე ვალიდაცია ჩააგდო");
+    // }
+
+    // if (document.getElementById("covid-yes").checked) {
+    //   if (document.getElementById("covidAt").value) {
+    //     console.log("მეორე ვალიდაციაც გაიარა");
+    //   } else {
+    //     console.log("მეორე ვალიდაცია ვერ გაიარა");
+    //   }
+    // } else if (document.getElementById("covid-no")) {
+    //   console.log("ნო-ზე გადის მაინც");
+    // }
+    // if (document.getElementById("vaccine-yes").checked) {
+    //   if (document.getElementById("vaccineAt")) {
+    //     console.log("მესამე ვალიდაციაც გაიარა");
+    //   } else {
+    //     console.log("მესამეზე ჩავარდა");
+    //   }
+    // } else if (document.getElementById("vaccine-no")) {
+    //   console.log("გააქ ამაზე ვაქცინა ნო-ზე");
+    // }
+  } else if (currentURL == "http://127.0.0.1:5500/pages/page4.html") {
+    if (
+      document.getElementById("dev-talk-yes").checked &&
+      document.getElementById("devtalk-text").value.length > 1
+    ) {
+      console.log("საბმითამდე ცოტა დარჩა");
+      if (document.getElementById("special-text").value.length > 1) {
+        console.log("მზადაა გასაშვებად");
+        window.location.href = `http://127.0.0.1:5500/pages/page${
+          currentPageNumber + 1
+        }.html`;
+      }
+    } else if (document.getElementById("dev-talk-no").checked) {
+      if (document.getElementById("special-text").value.length > 1) {
+        console.log("მზადაა გასაშვებად");
+        window.location.href = `http://127.0.0.1:5500/pages/page${
+          currentPageNumber + 1
+        }.html`;
+      }
+    }
+
+    ///////////////////////////////////////////////////////////////
+
+    if (document.getElementById("dev-talk-yes").checked) {
+      // localStorage.removeItem("will_organize_devtalk");
+      localStorage.setItem("will_organize_devtalk", true);
+      localStorage.setItem(
+        "devtalk_topic",
+        document.getElementById("devtalk-text").value
+      );
+    } else if (document.getElementById("dev-talk-no").checked) {
+      // localStorage.removeItem("will_organize_devtalk");
+      localStorage.setItem("will_organize_devtalk", false);
+    }
+    localStorage.setItem(
+      "something_special",
+      document.getElementById("special-text").value
+    );
   }
 });
 
@@ -265,10 +434,6 @@ nextBtn.addEventListener("click", function () {
 // localStorage.setItem("lastname", lastName.value);
 // localStorage.setItem("email", email.value);
 // });
-
-// firstName.value = localStorage.getItem("firstname");
-// lastName.value = localStorage.getItem("lastname");
-// email.value = localStorage.getItem("email");
 
 /// radio buttons check - ეს უკვე გადატანილი მაქვს ხომმმმმმმმმ
 // ეს მერე ანკომენტ და იქით

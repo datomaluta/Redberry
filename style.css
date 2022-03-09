@@ -11,9 +11,11 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   position: relative;
-  background-color: #101111;
+  background-color: #151718;
   background-image: url("img/stars.png");
   background-repeat: no-repeat;
+  width: 1920px;
+  height: 1080px;
 }
 
 .welcome-text {
@@ -21,7 +23,7 @@ body {
   font-size: 96px;
   font-family: "Rowdies", cursive;
   margin-top: 175px;
-  margin-bottom: 105px;
+  margin-bottom: 140px;
   font-style: normal;
   font-weight: normal;
 }
@@ -36,7 +38,7 @@ body {
   font-size: 24px;
   color: #ffffff;
   font-family: inherit;
-  margin-bottom: 18px;
+  margin-bottom: 30px;
   cursor: pointer;
 }
 

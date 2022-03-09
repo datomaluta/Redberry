@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  width: 1920px;
+  height: 1080px;
+  /* height: 1600px; */
+  background-color: #151718;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .thank-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+h1 {
+  font-family: "Rowdies", cursive;
+  font-size: 96px;
+  color: #fe3b1f;
+}
