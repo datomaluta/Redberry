@@ -31,7 +31,7 @@ submitBtn.addEventListener("click", function () {
     : "NaN";
 
   const testObj = {
-    token: "2f50bd03-8103-451a-9b41-091bc5055a5e",
+    token: "f5bd395f-ca21-425c-9fda-2fd655df3b05",
     first_name: localStorage.getItem("firstname"),
     last_name: localStorage.getItem("lastname"),
     email: localStorage.getItem("email"),
@@ -94,21 +94,21 @@ submitBtn.addEventListener("click", function () {
       console.log(data);
     });
   window.location.href = "http://127.0.0.1:5500/pages/thanks.html";
-  //   setTimeout(() => {
-  //     console.log("ჰელო ფეშენ ტივი");
-  //   }, 3000);
+  setTimeout(() => {
+    console.log("ჰელო ფეშენ ტივი");
+  }, 3000);
 });
 
 // getBtn.addEventListener("click", function () {
-//   //   console.log("migebulia serrrrr");
-//   fetch(
-//     "https://bootcamp-2022.devtest.ge/api/applications?token=2f50bd03-8103-451a-9b41-091bc5055a5e",
-//     {
-//       method: "GET",
-//     }
-//   )
-//     .then((respnse) => respnse.json())
-//     .then((data) => console.log(data));
+//   console.log("migebulia serrrrr");
+// fetch(
+//   "https://bootcamp-2022.devtest.ge/api/applications?token=2f50bd03-8103-451a-9b41-091bc5055a5e",
+//   {
+//     method: "GET",
+//   }
+// )
+//   .then((respnse) => respnse.json())
+//   .then((data) => console.log(data));
 // });
 
 // function sendApp() {

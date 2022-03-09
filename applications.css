@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  /* position: relative; */
+  background-color: #151718;
+  /* background-image: url("img/stars.png"); */
+  /* background-repeat: no-repeat; */
+  width: 1920px;
+  /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.container {
+  width: 1154px;
+  /* display: flex;
+    justify-content: center; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-family: "Rowdies", cursive;
+  font-size: 56px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+.dropbtn {
+  background-color: #fe3b1f;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  min-width: 1154px;
+  height: 54px;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: rgb(248, 46, 15);
+}
+
+.dropdown {
+  position: relative;
+  margin-bottom: 40px;
+  /* display: inline-block; */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 1154px;
+  height: 1500px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.date-div {
+  width: 349px;
+  height: 54px;
+  border: 1px solid #525557;
+  padding-top: 17px;
+  padding-left: 17px;
+}
+
+.devtalk-text-div {
+  width: 447px;
+  height: 112px;
+  border: 1px solid #525557;
+  padding-left: 23px;
+  padding-top: 24px;
+}
+
+.special-text-div {
+  width: 447px;
+  height: 89px;
+  border: 1px solid #525557;
+  padding-left: 23px;
+  padding-top: 24px;
+}
+
+.dropdown-content {
+  position: relative;
+}
+
+.topic {
+  color: #fe3b1f;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.personal-information {
+  /* background-color: aqua; */
+  position: absolute;
+  top: 36px;
+  left: 100px;
+  width: 400px;
+  height: 300px;
+}
+
+.covid-situation {
+  /* background-color: peru; */
+  width: 400px;
+  height: 900px;
+  position: absolute;
+  left: 100px;
+  top: 415px;
+}
+
+.skillset {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  top: 36px;
+  left: 550px;
+  /* background-color: #525557; */
+}
+
+.insights {
+  position: absolute;
+  width: 500px;
+  height: 650px;
+  /* background-color: greenyellow; */
+  top: 422px;
+  left: 550px;
+}
+
+.personal-information h3 {
+  margin-top: 36px;
+  font-weight: 400;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.skillset h3 {
+  margin-top: 36px;
+}
+
+.covid-situation h3 {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.insights h3 {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.insights p {
+  /* margin-bottom: 15px;
+    margin-top: 20px; */
+}
+
+.devtalk {
+  margin-top: 75px;
+}
+
+.special {
+  margin-top: 37px;
+}

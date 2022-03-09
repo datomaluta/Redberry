@@ -263,6 +263,47 @@ nextBtn.addEventListener("click", function () {
     }
   } else if (currentURL == "http://127.0.0.1:5500/pages/page3.html") {
     // console.log("მესამე ფეიჯი");
+    if (document.getElementById("sairme").checked) {
+      // localStorage.removeItem("work_preference");
+      localStorage.setItem("work_preference", "from_office");
+    } else if (document.getElementById("home").checked) {
+      // localStorage.removeItem("work_preference");
+      localStorage.setItem("work_preference", "from_home");
+    } else if (document.getElementById("hybrid").checked) {
+      // localStorage.removeItem("work_preference");
+      localStorage.setItem("work_preference", "hybrid");
+    }
+
+    // shemaq cvlilebebi
+    if (document.getElementById("covid-yes").checked) {
+      // localStorage.removeItem("had_covid");
+      localStorage.setItem("had_covid", true);
+      localStorage.setItem(
+        "had_covid_at",
+        document.getElementById("covidAt").value
+      );
+
+      //aqac shemqa
+    } else if (document.getElementById("covid-no").checked) {
+      // localStorage.removeItem("had_covid");
+      localStorage.setItem("had_covid", false);
+      // localStorage.removeItem("had_covid_at");
+      // localStorage.setItem("had_covid_at", "");
+    }
+
+    if (document.getElementById("vaccine-yes").checked) {
+      // localStorage.removeItem("vaccinated");
+      localStorage.setItem("vaccinated", true);
+      localStorage.setItem(
+        "vaccinated_at",
+        document.getElementById("vaccineAt").value
+      );
+    } else if (document.getElementById("vaccine-no").checked) {
+      // localStorage.removeItem("vaccinated");
+      localStorage.setItem("vaccinated", false);
+      // localStorage.setItem("vaccinated_at", "");
+      // localStorage.removeItem("vaccinated_at");
+    }
     if (
       document.getElementById("sairme").checked ||
       document.getElementById("home").checked ||
@@ -317,44 +358,44 @@ nextBtn.addEventListener("click", function () {
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    if (document.getElementById("sairme").checked) {
-      localStorage.removeItem("work_preference");
-      localStorage.setItem("work_preference", "from_office");
-    } else if (document.getElementById("home").checked) {
-      localStorage.removeItem("work_preference");
-      localStorage.setItem("work_preference", "from_home");
-    } else if (document.getElementById("hybrid").checked) {
-      localStorage.removeItem("work_preference");
-      localStorage.setItem("work_preference", "hybrid");
-    }
+    // if (document.getElementById("sairme").checked) {
+    //   localStorage.removeItem("work_preference");
+    //   localStorage.setItem("work_preference", "from_office");
+    // } else if (document.getElementById("home").checked) {
+    //   localStorage.removeItem("work_preference");
+    //   localStorage.setItem("work_preference", "from_home");
+    // } else if (document.getElementById("hybrid").checked) {
+    //   localStorage.removeItem("work_preference");
+    //   localStorage.setItem("work_preference", "hybrid");
+    // }
 
-    if (document.getElementById("vaccine-yes").checked) {
-      localStorage.removeItem("had_covid");
-      localStorage.setItem("had_covid", true);
-      localStorage.setItem(
-        "had_covid_at",
-        document.getElementById("covidAt").value
-      );
-    } else if (document.getElementById("vaccine-no").checked) {
-      // localStorage.removeItem("had_covid");
-      localStorage.setItem("had_covid", false);
-      // localStorage.removeItem("had_covid_at");
-      // localStorage.setItem("had_covid_at", "");
-    }
+    // if (document.getElementById("vaccine-yes").checked) {
+    //   localStorage.removeItem("had_covid");
+    //   localStorage.setItem("had_covid", true);
+    //   localStorage.setItem(
+    //     "had_covid_at",
+    //     document.getElementById("covidAt").value
+    //   );
+    // } else if (document.getElementById("vaccine-no").checked) {
+    //   // localStorage.removeItem("had_covid");
+    //   localStorage.setItem("had_covid", false);
+    //   // localStorage.removeItem("had_covid_at");
+    //   // localStorage.setItem("had_covid_at", "");
+    // }
 
-    if (document.getElementById("vaccine-yes").checked) {
-      localStorage.removeItem("vaccinated");
-      localStorage.setItem("vaccinated", true);
-      localStorage.setItem(
-        "vaccinated_at",
-        document.getElementById("vaccineAt").value
-      );
-    } else if (document.getElementById("vaccine-no").checked) {
-      // localStorage.removeItem("vaccinated");
-      localStorage.setItem("vaccinated", false);
-      // localStorage.setItem("vaccinated_at", "");
-      // localStorage.removeItem("vaccinated_at");
-    }
+    // if (document.getElementById("vaccine-yes").checked) {
+    //   localStorage.removeItem("vaccinated");
+    //   localStorage.setItem("vaccinated", true);
+    //   localStorage.setItem(
+    //     "vaccinated_at",
+    //     document.getElementById("vaccineAt").value
+    //   );
+    // } else if (document.getElementById("vaccine-no").checked) {
+    //   // localStorage.removeItem("vaccinated");
+    //   localStorage.setItem("vaccinated", false);
+    //   // localStorage.setItem("vaccinated_at", "");
+    //   // localStorage.removeItem("vaccinated_at");
+    // }
 
     // if (
     //   document.getElementById("covid-yes").checked &&
