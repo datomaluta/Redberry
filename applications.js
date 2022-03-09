@@ -1,33 +1,8 @@
 "use strict";
 
-// console.log(dropbuttons);
-// console.log(drcontents);
-
-// dropbuttons.forEach((element) => {
-//   element.addEventListener("click", function () {
-//     // console.log(document.querySelector(".dropdown-content"));
-//     console.log(element);
-//     console.log(element.nextElementSibling);
-//     element.nextElementSibling.classList.toggle("show");
-//     // document.querySelector(".dropdown-content").classList.toggle("show");
-//     console.log("კლიკი");
-//   });
-// });
-
-// dropbuttons[1].addEventListener("click", function () {
-//   console.log(document.querySelector(".dropdown-content2"));
-//   //   document.querySelector(".dropdown-content").classList.toggle("show");
-//   console.log("კლიკი");
-// });
-
-// dropbuttons.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   document.getElementById("myDropdown").classList.toggle("show");
-//   console.log("კლიკი");
-// });
 let conta = document.querySelector(".container");
 fetch(
-  "https://bootcamp-2022.devtest.ge/api/applications?token=f5bd395f-ca21-425c-9fda-2fd655df3b05",
+  "https://bootcamp-2022.devtest.ge/api/applications?token=398ebcac-b19a-438d-b1b7-66828d8b7937",
   {
     method: "GET",
   }

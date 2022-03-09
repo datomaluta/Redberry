@@ -31,7 +31,7 @@ submitBtn.addEventListener("click", function () {
     : "NaN";
 
   const testObj = {
-    token: "f5bd395f-ca21-425c-9fda-2fd655df3b05",
+    token: "398ebcac-b19a-438d-b1b7-66828d8b7937",
     first_name: localStorage.getItem("firstname"),
     last_name: localStorage.getItem("lastname"),
     email: localStorage.getItem("email"),
@@ -93,75 +93,17 @@ submitBtn.addEventListener("click", function () {
       //   console.log(typeof data);
       console.log(data);
     });
-  window.location.href = "http://127.0.0.1:5500/pages/thanks.html";
+
   setTimeout(() => {
-    console.log("ჰელო ფეშენ ტივი");
-  }, 3000);
+    window.location.href = "http://127.0.0.1:5500/pages/thanks.html";
+    setTimeout(() => {
+      console.log("works");
+    }, 3000);
+  }, 2000);
+  localStorage.clear();
+
+  // window.location.href = "http://127.0.0.1:5500/pages/thanks.html";
+  // setTimeout(() => {
+  //   console.log("ჰელო ფეშენ ტივი");
+  // }, 3000);
 });
-
-// getBtn.addEventListener("click", function () {
-//   console.log("migebulia serrrrr");
-// fetch(
-//   "https://bootcamp-2022.devtest.ge/api/applications?token=2f50bd03-8103-451a-9b41-091bc5055a5e",
-//   {
-//     method: "GET",
-//   }
-// )
-//   .then((respnse) => respnse.json())
-//   .then((data) => console.log(data));
-// });
-
-// function sendApp() {
-//   fetch("https://bootcamp-2022.devtest.ge/api/application", {
-//     method: "POST",
-//     body: JSON.stringify({
-//       token: "385a3ffc-8856-4ef6-92ee-57a84f709dcc",
-//       first_name: "Nugo",
-//       last_name: "Jashi",
-//       email: "gelashvili@gela.ge",
-//       phone: "+995591933382",
-//       skills: [
-//         {
-//           id: 1,
-//           experience: 3,
-//         },
-//       ],
-//       work_preference: "from_home",
-//       had_covid: true,
-//       had_covid_at: "2022-02-23",
-//       vaccinated: true,
-//       vaccinated_at: "2022-02-23",
-//       will_organize_devtalk: true,
-//       devtalk_topic: "I would ...",
-//       something_special: "I am special!",
-//     }),
-//     headers: {
-//       "Content-type": "application/json; charset=UTF-8",
-//       Accept: "application/json",
-//     },
-//   })
-//     .then((response) => {
-//       //   console.log(typeof response);
-//       return response;
-//     })
-//     .then((data) => {
-//       //   console.log(typeof data);
-//       console.log(data);
-//     });
-// }
-
-// sendApp();
-
-// function getApps() {
-//   fetch(
-//     "https://bootcamp-2022.devtest.ge/api/applications?token=385a3ffc-8856-4ef6-92ee-57a84f709dcc",
-//     {
-//       method: "GET",
-//     }
-//   )
-//     .then((respnse) => respnse.json())
-//     .then((data) => console.log(data));
-// }
-// getApps();
-
-// console.log(localStorage.getItem("skills"));
