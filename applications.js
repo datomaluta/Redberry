@@ -2,13 +2,14 @@
 
 let conta = document.querySelector(".container");
 fetch(
-  "https://bootcamp-2022.devtest.ge/api/applications?token=398ebcac-b19a-438d-b1b7-66828d8b7937",
+  "https://bootcamp-2022.devtest.ge/api/applications?token=23cb3ac6-d45a-4cf7-bf1a-4d782a7f9318",
   {
     method: "GET",
   }
 )
   .then((respnse) => respnse.json())
   .then((data) => {
+    let counter = 1;
     console.log(data);
     data.forEach((element) => {
       let saidanvmushaob1 = "";
@@ -85,21 +86,58 @@ fetch(
       ////////////////////////////////////////////////
       ////////////////////////////////////////////////
       let rowdiv = document.createElement("div");
-      console.log(element.skills);
-      let idskill;
-      let expskill;
+      // let idskill;
+      // let expskill;
+      // let divforskill = document.createElement("div");
+      // divforskill.setAttribute("class", "row-for-skill");
+      // let pforskill = document.createElement("p");
+      // let pforexp = document.createElement("p");
+      // pforexp.setAttribute("class", "skill-p");
       element.skills.forEach((item) => {
+        // let rowdiv = document.createElement("div");
+        let idskill;
+        let expskill;
+        let divforskill = document.createElement("div");
+        divforskill.setAttribute("class", "row-for-skill");
+        let pforskill = document.createElement("p");
+        let pforexp = document.createElement("p");
+        pforexp.setAttribute("class", "skill-p");
         idskill = item.id;
         expskill = item.experience;
+        if (idskill == 1) {
+          pforskill.textContent = "HTML";
+          pforexp.textContent = "Years of Experience: " + expskill;
+        } else if (idskill == 2) {
+          pforskill.textContent = "CSS";
+          pforexp.textContent = "Years of Experience: " + expskill;
+        } else if (idskill == 3) {
+          pforskill.textContent = "PHP";
+          pforexp.textContent = "Years of Experience: " + expskill;
+        } else if (idskill == 4) {
+          pforskill.textContent = "Laravel";
+          pforexp.textContent = "Years of Experience: " + expskill;
+        } else if (idskill == 5) {
+          pforskill.textContent = "React.JS";
+          pforexp.textContent = "Years of Experience: " + expskill;
+        } else if (idskill == 6) {
+          pforskill.textContent = "Vue.JS";
+          pforexp.textContent = "Years of Experience: " + expskill;
+        } else if (idskill == 7) {
+          pforskill.textContent = "Svelte";
+          pforexp.textContent = "Years of Experience: " + expskill;
+        } else if (idskill == 8) {
+          pforskill.textContent = "Angular";
+          pforexp.textContent = "Years of Experience: " + expskill;
+        }
 
-        let pforid = document.createElement("p");
-        let pforexp = document.createElement("p");
-        pforid.textContent = "skill id: " + idskill;
-        pforexp.textContent = "experience: " + expskill;
-        rowdiv.appendChild(pforid);
-        rowdiv.appendChild(pforexp);
+        // pforid.textContent = "skill id: " + idskill;
+        // pforexp.textContent = "experience: " + expskill;
+
+        divforskill.appendChild(pforskill);
+        divforskill.appendChild(pforexp);
+        rowdiv.appendChild(divforskill);
       });
-      console.log(rowdiv);
+      // console.log(rowdiv);
 
       ////////////////////////////////////////////////
       ////////////////////////////////////////////////
@@ -123,24 +161,24 @@ fetch(
         "afterbegin",
         `      
       <div class="dropdown">
-        <button class="dropbtn">Dropdown &downarrow;</button>
+        <button class="dropbtn">Application:  ${counter++}   &downarrow;</button>
         <div class="dropdown-content">
         <div class="personal-information">
         <h3 class="topic">Personal Information</h3>
         <div class="row">
-          <p>FirstName</p>
+          <p class="pers-p">FirstName</p>
           <p id="firstname">${element.first_name}</p>
         </div>
         <div class="row">
-          <p>LastName</p>
+          <p class="pers-p">LastName</p>
           <p>${element.last_name}</p>
         </div>
         <div class="row">
-            <p>E-Mail</p>
+            <p class="pers-p-bottom">E-Mail</p>
             <p>${element.email}</p>
         </div>
         <div class="row">
-            <p>Phone</p>
+            <p class="pers-p-bottom">Phone</p>
             <p>${element.phone}</p>
         </div>
       </div>
@@ -148,15 +186,15 @@ fetch(
       <div class="covid-situation">
         <h3 class="topic">Covid Situation</h3>
         <h3>How would you prefer to work?</h3>
-        <p>${saidanvmushaob1}</p>
-        <p>${saidanvmushaob2}</p>
-        <p>${saidanvmushaob3}</p>
+        <p class="radios">${saidanvmushaob1}</p>
+        <p class="radios">${saidanvmushaob2}</p>
+        <p class="radios">${saidanvmushaob3}</p>
         
 
         <div class="covid-yes-or-no">
           <h3>Did you have covid 19?</h3>
-          <p>${hadcovidyes}</p>
-          <p>${hadcovidno}</p>
+          <p class="radios">${hadcovidyes}</p>
+          <p class="radios">${hadcovidno}</p>
         </div>
 
         <div class="covid-at-date">
@@ -164,19 +202,21 @@ fetch(
           
           <div class="date-div">
             ${covidDateOnPage}
+            <img class="calendar" src="../img/calendar.svg" alt="calendar" />
           </div>
         </div>
 
         <div class="vaccine-yes-or-no">
           <h3>Have you been vaccinated?</h3>
-          <p>${hadvaccineyes}</p>
-          <p>${hadvaccineno}</p>
+          <p class="radios">${hadvaccineyes}</p>
+          <p class="radios">${hadvaccineno}</p>
         </div>
 
         <div class="vaccinate-date">
           <h3>When did you get covid vaccine?</h3>
           <div class="date-div">
           ${vaccDateOnPage}
+          <img class="calendar" src="../img/calendar.svg" alt="calendar" />
         </div>
         </div>
       </div>
@@ -188,18 +228,18 @@ fetch(
 
       <div class="insights">
         <h3 class="topic">Insights</h3>
-        <p>Would you attend Devtalks and maybe also organize your own?</p>
-        <p>${devtalkyes}</p>
-        <p>${devtalkno}</p>
+        <h3>Would you attend Devtalks and maybe also organize your own?</h3>
+        <p class="radios">${devtalkyes}</p>
+        <p class="radios">${devtalkno}</p>
         <div class="devtalk">
-          <p>What would you speak about at Devtalk?</p>
+          <h3>What would you speak about at Devtalk?</h3>
           <div class="devtalk-text-div">
             ${element.devtalk_topic}
           </div>
 
         </div>
         <div class="special">
-          <p>Tell us somthing special</p>
+          <h3>Tell us somthing special</h3>
           <div class="special-text-div">
             ${element.something_special}
           </div>

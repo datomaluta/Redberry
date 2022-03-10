@@ -32,8 +32,9 @@ h1 {
   font-size: 56px;
   font-weight: 700;
   color: #ffffff;
-  text-align: center;
-
+  /* text-align: center; */
+  margin-top: 94px;
+  margin-left: 380px;
   margin-bottom: 60px;
 }
 
@@ -89,6 +90,7 @@ h1 {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  margin-bottom: 40px;
 }
 .date-div {
   width: 349px;
@@ -96,6 +98,7 @@ h1 {
   border: 1px solid #525557;
   padding-top: 17px;
   padding-left: 17px;
+  position: relative;
 }
 
 .devtalk-text-div {
@@ -133,6 +136,10 @@ h1 {
   left: 100px;
   width: 400px;
   height: 300px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
 }
 
 .covid-situation {
@@ -165,11 +172,12 @@ h1 {
 .personal-information h3 {
   margin-top: 36px;
   font-weight: 400;
+  margin-bottom: 50px;
 }
 
-.row {
+/* .row {
   margin-top: 20px;
-}
+} */
 
 .skillset h3 {
   margin-top: 36px;
@@ -198,4 +206,33 @@ h1 {
 
 .special {
   margin-top: 37px;
+}
+
+.pers-p {
+  margin-right: 50px;
+}
+
+.pers-p-bottom {
+  margin-right: 83px;
+}
+
+.row-for-skill {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  font-size: 18px;
+}
+
+.skill-p {
+  margin-right: 100px;
+}
+
+.radios {
+  margin-bottom: 10px;
+}
+
+.calendar {
+  position: absolute;
+  right: 10px;
+  top: 15px;
 }
